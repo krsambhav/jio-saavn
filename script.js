@@ -1,15 +1,37 @@
 let inputBox = $("#inputBox");
 let url = "https://saavn.glitch.me/";
 let outputContainer = $('#songContainer');
+let submitBtn = $('#submitBtn');
 
 inputBox.on("keypress", (e) => {
     if (e.which == 13) {
-        songSearch(e);
-        outputContainer.html('<img src="./loading.gif" id="gif">');
-        $('#gif').css('opacity', '1');
-        inputBox.prop('disabled', true);
+        if(inputBox.val().trim() !== ''){
+            songSearch(e);
+            outputContainer.html('<img src="./loading.gif" id="gif">');
+            $('#gif').css('opacity', '1');
+            inputBox.prop('disabled', true);
+            submitBtn.prop('disabled', true);
+        }else{
+            alert('Enter Something Genius 🤷‍♂️');
+            inputBox.val('');
+        }
     }
 });
+
+submitBtn.on('click', (e) => {
+    if(inputBox.val().trim() !== '')
+    {
+        songSearch(e);
+        submitBtn.prop('disabled', true);
+        inputBox.prop('disabled', true);
+        outputContainer.html('<img src="./loading.gif" id="gif">');
+        $('#gif').css('opacity', '1');
+    }else{
+        inputBox.val('');
+        alert('Enter Something Genius 🤷‍♂️')
+    }
+})
+
 
 function songSearch(e) {
     let query = inputBox.val();
@@ -51,4 +73,5 @@ function manipulateData(data) {
     });
     outputContainer.html(output);
     inputBox.prop('disabled', false);
+    submitBtn.prop('disabled', false);
 }
