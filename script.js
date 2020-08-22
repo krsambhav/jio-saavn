@@ -45,7 +45,7 @@ function manipulateData(data) {
                 Duration: <span id="duration">${duration}</span>
             </div>
             <br>
-            <a href="${url}"><button class="btn btn-primary">Download</button></a>
+            <a href="${url}" target="_blank"><button class="btn btn-primary">Download</button></a>
         </div>
     </div>`;
     });
