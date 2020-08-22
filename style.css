@@ -1,0 +1,14 @@
+*{
+    font-family: 'Josefin Slab';
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+body{
+    background-color: #191F26 !important;
+}
+*{
+    background-color: #191F26 !important;
+}
+.form-control:focus{
+    box-shadow: none;
+}
