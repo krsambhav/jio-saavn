@@ -5,7 +5,7 @@ let outputContainer = $('#songContainer');
 inputBox.on("keypress", (e) => {
     if (e.which == 13) {
         songSearch(e);
-        outputContainer.html('<img src="./loading.gif">');
+        $('#gif').css('opacity', '1');
         inputBox.prop('disabled', true);
     }
 });

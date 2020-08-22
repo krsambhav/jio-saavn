@@ -16,6 +16,9 @@ body{
 .card{
     margin: 1rem;
 }
+.songContainer > img{
+    opacity: 0;
+}
 @media (max-width:600px){
     .card{
         margin: 0;
