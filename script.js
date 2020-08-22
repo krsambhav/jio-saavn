@@ -31,8 +31,8 @@ function manipulateData(data) {
         let image = song.image;
         let url = song.url;
         let duration = song.duration;
-        output += `<div class="card text-center m-5 bg-dark text-white border-0" style="width: 15rem;">
-        <img src="${image}" style="width: 15rem;">
+        output += `<div class="card text-center bg-dark text-white border-0" style="width: 15rem;">
+        <img src="${image}" style="width: 100%;">
         <div class="card-body">
             <h3 class="card-title text-center">
                 ${songName}
