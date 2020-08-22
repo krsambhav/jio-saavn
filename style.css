@@ -4,10 +4,10 @@
     font-size: 1.2rem;
 }
 body{
-    background-color: #171B22 !important;
+    background-color: #000 !important;
 }
 *{
-    background-color: #171B22 !important;
+    background-color: #000 !important;
 }
 .form-control:focus{
     box-shadow: none;
