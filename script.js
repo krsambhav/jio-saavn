@@ -6,6 +6,7 @@ inputBox.on("keypress", (e) => {
     if (e.which == 13) {
         songSearch(e);
         outputContainer.html('<img src="./loading.gif">');
+        inputBox.prop('disabled', true);
     }
 });
 
@@ -48,4 +49,5 @@ function manipulateData(data) {
     </div>`;
     });
     outputContainer.html(output);
+    inputBox.prop('disabled', false);
 }

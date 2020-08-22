@@ -4,11 +4,24 @@
     font-size: 1.2rem;
 }
 body{
-    background-color: #191F26 !important;
+    background-color: #171B22 !important;
 }
 *{
-    background-color: #191F26 !important;
+    background-color: #171B22 !important;
 }
+
 .form-control:focus{
     box-shadow: none;
+}
+.card{
+    margin: 1rem;
+}
+@media (max-width:600px){
+    .card{
+        margin: 0;
+    }
+    .songContainer > img{
+        height: 200px;
+        widows: 250px;
+    }
 }
